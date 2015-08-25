@@ -30,54 +30,77 @@ public float getfDiscount() {
 public void setfDiscount(float fDiscount) {
 	this.fDiscount = fDiscount;
 }
+
 static int counter;
+
 static
 {
 counter=1000;
 }
+
 RegularCustomer()
+
 {
 	setIcustomerID(++counter);
 }
+
 RegularCustomer(String name,float dis)
+
 {
 	setIcustomerID(++counter);
 	setsCustomername(name);
 	setfDiscount(dis);
 }
+
 }
 
-public class PrivillegedCustomer extends Customer {
+public class PrivillegedCustomer extends Customer 
+{
+
 private String sMemCardType;
 
-public String getsMemCardType() {
+public String getsMemCardType()
+{
 	return sMemCardType;
 }
 
-public void setsMemCardType(String sMemCardType) {
+public void setsMemCardType(String sMemCardType)
+{
 	this.sMemCardType = sMemCardType;
 }
+
 static int counter;
+
 static
+
 {
+
 counter=3000;
+
 }
+
 PrivillegedCustomer()
+
 {
 	setIcustomerID(++counter);
 }
+
 PrivillegedCustomer(String sName,String sCard)
+
 {
 	setIcustomerID(++counter);
 	setsCustomername(sName);
 	setsMemCardType(sCard);
 	
 }
+
 }
 
-public class Demo {
+public class Demo
+{
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
        RegularCustomer r1=new RegularCustomer("p",20);
        RegularCustomer r2=new RegularCustomer("n",30);
        PrivillegedCustomer p1= new PrivillegedCustomer("s","Gold");
@@ -90,7 +113,6 @@ public class Demo {
        System.out.println("ID2 " +r2.getIcustomerID());
        System.out.println("name2 " +r2.getsCustomername());
        System.out.println("discount2 " +r2.getfDiscount());
-       System.out.println("");
        System.out.println("Privilage customer details");
        System.out.println("ID1 " +p1.getIcustomerID());
        System.out.println("name1 " +p1.getsCustomername());
